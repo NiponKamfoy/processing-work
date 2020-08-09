@@ -1,6 +1,6 @@
 // Nipon Kamfoy
 // 09/08/2020
-// add amount of balloon and set start positoin of balloon random and random size,colors,speed
+// add the conditional if mouse has click the speed of balloon will increase
 
 Balloon balloon0 ; 
 Balloon balloon1 ;
@@ -67,6 +67,9 @@ class Balloon {
     }
     else if (balloon4.y_position < 0) {
       balloon4 = new Balloon();
+    }
+    else if (mousePressed){
+      y_position -= speed_flow;
     }
     y_position -= speed_flow;
     build_balloon();
