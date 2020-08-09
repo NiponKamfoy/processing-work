@@ -1,8 +1,8 @@
 // Nipon Kamfoy
 // 09/08/2020
-// build balloon with class
+// change the movement of balloon to start again when it hitting a frame
 
-int speed = 10;
+int speed = 5;
 int y_position = 500;
 Balloon balloon ;
 
@@ -26,7 +26,7 @@ class Balloon{
   void flow(){
     background(255);
     if (y_position <= 0 || y_position >500){
-      speed *= -1;
+      y_position = 500;
     }
     y_position -= speed;
     build_balloon();
